@@ -1,8 +1,9 @@
+import Hero from "./sections/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Hero />
+    </>
   );
 }

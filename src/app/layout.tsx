@@ -7,7 +7,7 @@ import { Header } from "./components/Header";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["500", "800"],
+  weight: ["400", "500", "800"],
   display: "swap",
 });
 

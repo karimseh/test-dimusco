@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .text-fluid-sm {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  .text-fluid-base{
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+  }
+  .text-fluid-lg{
+    font-size: clamp(1.25rem, 2.75vw, 2rem);
+  }
+  .text-fluid-xl{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+}
 :root {
   --background: #000;
   --foreground: #FFF;
   --primary: #FFB038;
 }
-
-
-
 
 body {
   background: var(--background);

@@ -1,10 +1,29 @@
 import Link from 'next/link';
 import LogoIcon from '../../assets/icons/logo.svg';
-export function Header() {
+import UserIcon from '../../assets/icons/user.svg';
+
+export  function Header() {
     return (
-        <header className="flex items-center justify-between px-4 py-2 shadow-md">
-            <Link href="/">
-                <LogoIcon  />
+        <header className="container m-auto flex items-center justify-between p-6  shadow-md">
+            <div className='flex-1'>
+                <div className='w-fit'>
+
+                    <Link href="/">
+                        <LogoIcon className="translate-y-[-6%]" />
+                    </Link>
+                </div>
+            </div>
+
+            <nav className='flex-4'>
+                <ul className="flex gap-4">
+                    <li>
+                        <Link href="/contact">Contact Us</Link>
+                    </li>
+                </ul>
+            </nav>
+
+            <Link href="https://cloud.dimusco.com" aria-label='Log in'>
+                <UserIcon />
             </Link>
 
         </header>
