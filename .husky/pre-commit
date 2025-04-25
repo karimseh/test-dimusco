@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Formatting all files with Prettier..."
+npx prettier --write .
+
+# Optionally re-add everything (in case Prettier changed files)
+git add .
