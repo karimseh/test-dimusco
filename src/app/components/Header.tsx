@@ -4,12 +4,12 @@ import UserIcon from '../../assets/icons/user.svg';
 
 export  function Header() {
     return (
-        <header className="container m-auto flex items-center justify-between p-6  shadow-md">
+        <header className=" bg-black container m-auto flex items-center justify-between gap-2 p-6  shadow-md">
             <div className='flex-1'>
                 <div className='w-fit'>
 
                     <Link href="/">
-                        <LogoIcon className="translate-y-[-6%]" />
+                        <LogoIcon className="translate-y-[-6%]"  />
                     </Link>
                 </div>
             </div>
@@ -17,7 +17,7 @@ export  function Header() {
             <nav className='flex-4'>
                 <ul className="flex gap-4">
                     <li>
-                        <Link href="/contact">Contact Us</Link>
+                        <Link href="/contact" className='text-fluid-sm'>Contact Us</Link>
                     </li>
                 </ul>
             </nav>
