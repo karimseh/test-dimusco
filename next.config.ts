@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   webpack(config) {
+    // @ts-expect-error: implicit any for `rule`
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));
 
     config.module.rules.push(
