@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
-import NoteIcon from '../../../assets/icons/note.svg';
+import NoteIcon from '../../../../assets/icons/note.svg';
 import clsx from 'clsx';
 
 interface BlockItemProps extends ComponentPropsWithoutRef<'div'> {

@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
 import { Header } from './components/Header';
+import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -16,16 +19,24 @@ export const metadata: Metadata = {
     'Get the best sheet music collection at dimusco, the ultimate online destination for digital music scores. Download sheet music online with the best sheet music apps.',
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${poppins.variable} antialiased`}>
-        <Header />
-        {children}
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

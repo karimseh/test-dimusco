@@ -1,0 +1,25 @@
+{
+  "Header": {
+    "contactUs": "Contact Us"
+  },
+  "LandingPage": {
+    "title": "Use your sheet music with any device",
+    "description": "for Yourself and in any Group from a Band to an Orchestra",
+    "syncTitle": "Automatic Synchronization",
+    "syncDescription": "of your Annotations between your Devices and within Groups",
+    "read": "Read",
+    "readDesc": "All other info like Costs and Q&A",
+    "watch": "Watch",
+    "watchDesc": "Videos tell you all about dimusco",
+    "publish": "Publish",
+    "get": "Get",
+    "sheet": "Sheet Music",
+    "compos": "Compositions",
+    "scores": "Free Scores",
+    "adaptations": "Adaptations",
+    "annotations": "Annotations",
+    "majorPub": "Major Publishers",
+    "compoAdapt": "Compositions and Adaptations",
+    "pubDomain": "Public Domain"
+  }
+}

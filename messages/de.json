@@ -1,0 +1,25 @@
+{
+  "Header": {
+    "contactUs": "Schreib uns"
+  },
+  "LandingPage": {
+    "title": "Verwenden Sie Ihre Noten mit jedem Gerät",
+    "description": "für sich selbst und in jeder Gruppe von einer Band bis zu  Orchestern",
+    "syncTitle": "Automatische Synchronisation",
+    "syncDescription": "ihrer Einzeichnungen zwischen Ihren Geräten und innerhalb von Gruppen",
+    "read": "Lesen",
+    "readDesc": "Alle weiteren Informationen wie Kosten und Fragen & Antworten",
+    "watch": "Schauen",
+    "watchDesc": "Videos erzählen Ihnen alles über dimusco",
+    "publish": "Veröffentlichen",
+    "get": "Beziehen",
+    "sheet": "von Noten",
+    "compos": "Kompositionen",
+    "scores": "Ungeschützte Noten",
+    "adaptations": "Bearbeitungen",
+    "annotations": "Einzeichungen",
+    "majorPub": "Große Verlage",
+    "compoAdapt": "Kompositionen und Bearbeitungen",
+    "pubDomain": "Public Domain"
+  }
+}
