@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 export function Header() {
   const t = useTranslations('Header');
   return (
-    <header className=" bg-black container m-auto flex items-center justify-between gap-2 p-6  shadow-md">
+    <header className=" relative z-10 container m-auto flex items-center justify-between gap-2 p-6  shadow-md">
       <div className="flex-1">
         <div className="w-fit">
           <Link href="/">

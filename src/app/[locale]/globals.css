@@ -24,4 +24,23 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Poppins, sans-serif;
+  background-image: url('/images/bg.png');
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 1120px) {
+  body {
+    background-position: center;
+  }
 }

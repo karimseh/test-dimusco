@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 interface BlockProps {
   linkTitle: string;
+  underline?: boolean;
+  link?: string;
   extraTitle?: string;
   description?: string;
   className?: string;
@@ -10,6 +12,7 @@ interface BlockProps {
 }
 export default function Block({
   linkTitle,
+  link,
   extraTitle,
   description,
   className,
@@ -23,9 +26,14 @@ export default function Block({
       )}
     >
       <h2 className=" text-fluid-lg font-bold mb-2">
-        <Link href={'/'} className=" text-[var(--primary)]  underline">
-          {linkTitle}
-        </Link>
+        {link ? (
+          <Link href={link} className="text-[var(--primary)] underline ">
+            {linkTitle}
+          </Link>
+        ) : (
+          <span className="text-[var(--primary)] ">{linkTitle}</span>
+        )}
+
         {extraTitle && <span>{` ${extraTitle}`}</span>}
       </h2>
 

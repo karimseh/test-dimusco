@@ -20,7 +20,7 @@ import { useTranslations } from 'next-intl';
 export default function Hero() {
   const t = useTranslations('LandingPage');
   return (
-    <section className="max-w-[1600px] mx-auto min-h-[calc(100vh-80px)] flex flex-col items-stretch gap-10 md:gap-20 px-4">
+    <section className="relative z-10 max-w-[1600px] mx-auto min-h-[calc(100vh-80px)] flex flex-col items-stretch gap-10 md:gap-20 px-4">
       <div className="flex w-full flex-col items-center justify-center gap-4 md:gap-6 text-center py-8">
         <h1 className="text-fluid-xl tracking-wider font-extrabold text-[var(--primary)]">
           {t('title')}
@@ -98,6 +98,7 @@ export default function Hero() {
                   className="w-full h-auto"
                 />
               </div>
+
               <div className="flex items-center justify-center gap-4  flex-wrap">
                 <div className="sm:absolute sm:top-[5%] sm:left-[5%]  ">
                   <Link
@@ -144,7 +145,7 @@ export default function Hero() {
 
         {/* Info block watch - read - Get */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-1/2 mx-auto lg:mx-0">
-          <Block linkTitle={t('watch')} description={t('watchDesc')}>
+          <Block linkTitle={t('watch')} description={t('watchDesc')} link="/">
             <div className="flex flex-col justify-center items-center gap-2 sm:gap-4">
               <div className="flex items-center justify-center gap-4 sm:gap-8">
                 <ShuffleIcon />
@@ -158,11 +159,12 @@ export default function Hero() {
               <LineIcon className="hidden sm:block" />
             </div>
           </Block>
-          <Block linkTitle={t('read')} description={t('readDesc')}>
+          <Block linkTitle={t('read')} description={t('readDesc')} link="/">
             <DocIcon />
           </Block>
           <Block
             linkTitle={t('publish')}
+            link="/"
             extraTitle={t('sheet')}
             className="md:col-span-2 items-center md:items-start"
           >
@@ -179,10 +181,10 @@ export default function Hero() {
             className="md:col-span-2 items-center md:items-start"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-4 md:gap-x-8 mt-1">
-              <BlockItem title={t('majorPub')} />
-              <BlockItem title={t('compoAdapt')} />
-              <BlockItem title={t('pubDomain')} />
-              <BlockItem title={t('annotations')} />
+              <BlockItem title={t('majorPub')} link="/" className="underline" />
+              <BlockItem title={t('compoAdapt')} link="/" className="underline" />
+              <BlockItem title={t('pubDomain')} link="/" className="underline" />
+              <BlockItem title={t('annotations')} link="/" className="underline" />
             </div>
           </Block>
         </div>
