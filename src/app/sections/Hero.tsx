@@ -23,7 +23,7 @@ export default function Hero() {
           Use your sheet music with any device
         </h1>
         <p className="text-fluid-base font-normal">
-          for yourself and in Any Group from a Band to an Orchestra
+          for Yourself and in any Group from a Band to an Orchestra
         </p>
       </div>
 
@@ -37,7 +37,7 @@ export default function Hero() {
                   Automatic Synchronization
                 </h3>
                 <p className="text-fluid-base">
-                  of your annotations between All your Devices and within Groups
+                  of your Annotations between your Devices and within Groups
                 </p>
               </div>
 
@@ -161,7 +161,7 @@ export default function Hero() {
               <LineIcon className="hidden sm:block" />
             </div>
           </Block>
-          <Block linkTitle="Read" description="See all other info like Costs and Q&A">
+          <Block linkTitle="Read" description="All other info like Costs and Q&A">
             <DocIcon />
           </Block>
           <Block
