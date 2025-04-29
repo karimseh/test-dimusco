@@ -1,9 +1,9 @@
 import Block from '../components/Block';
 import DocIcon from '../../../assets/icons/doc.svg';
-import PlayStoreIcon from '../../../assets/icons/play-store.svg';
-import AppStoreIcon from '../../../assets/icons/app-store.svg';
-import MicrosoftStoreIcon from '../../../assets/icons/microsoft-store.svg';
-import MacAppStoreIcon from '../../../assets/icons/mac-app-store.svg';
+import PlayStoreUrl from '../../../assets/icons/play-store.svg?url';
+import AppStoreUrl from '../../../assets/icons/app-store.svg?url';
+import MicrosoftStoreUrl from '../../../assets/icons/microsoft-store.svg?url';
+import MacAppStoreUrl from '../../../assets/icons/mac-app-store.svg?url';
 import PlayIcon from '../../../assets/icons/play.svg';
 import RightIcon from '../../../assets/icons/right.svg';
 import LeftIcon from '../../../assets/icons/left.svg';
@@ -30,15 +30,15 @@ export default function Hero() {
 
       <div className="flex flex-col xl:flex-row items-center  gap-12 lg:gap-6 justify-between py-6 px-4">
         <div className="flex flex-col items-center justify-center gap-8 w-full lg:w-1/2 lg:max-w-[600px]">
-          <div className="relative sm:aspect-square w-full sm:max-w-[500px] mx-auto">
-            <div className="sm:rounded-full sm:border-[1.5px] w-full h-full flex flex-col gap-8 sm:flex-row items-center justify-center bg-black/5 overflow-hidden">
+          <div className="relative aspect-square w-full sm:max-w-[500px] mx-auto">
+            <div className="rounded-full border-[1.5px] w-full h-full flex flex-col gap-8 sm:flex-row items-center justify-center bg-black/5 overflow-hidden">
               {/* Center text */}
               <div className="text-center max-w-[70%] z-10">
                 <h3 className="text-fluid-lg font-bold text-[var(--primary)]">{t('syncTitle')}</h3>
                 <p className="text-fluid-base">{t('syncDescription')}</p>
               </div>
 
-              <div className=" absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[33%] w-auto hidden sm:block ">
+              <div className=" absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[20%] sm:max-w-[33%] w-auto  ">
                 <Image
                   src="/images/apple-tablet-iphone.png"
                   alt="Tablet and iPhone devices"
@@ -48,7 +48,7 @@ export default function Hero() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] max-w-[33%] w-auto hidden sm:block ">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] max-w-[25%] sm:max-w-[33%] w-auto  ">
                 <Image
                   src="/images/mac.png"
                   alt="Mac devices"
@@ -58,7 +58,7 @@ export default function Hero() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute top-[13%] left-[-15%] -translate-y-3 max-w-[33%] w-auto  hidden sm:block">
+              <div className="absolute top-[18%] left-[-7%] sm:top-[13%] sm:left-[-15%] -translate-y-3 max-w-[20%] sm:max-w-[33%] w-auto  ">
                 <Image
                   src="/images/android.png"
                   alt="Android devices"
@@ -68,7 +68,7 @@ export default function Hero() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute top-[15%] right-0 translate-x-[50%] translate-y-2.5 max-w-[33%] w-auto  hidden sm:block">
+              <div className="absolute top-[15%] right-[5%] sm:right-0 translate-x-[50%] translate-y-2.5 max-w-[25%] sm:max-w-[33%] w-auto  ">
                 <Image
                   src="/images/laptop.png"
                   alt="Windows devices"
@@ -78,7 +78,7 @@ export default function Hero() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute bottom-[13%] left-2 -translate-x-[50%] max-w-[33%] w-auto  hidden sm:block">
+              <div className="absolute bottom-[13%] left-2 -translate-x-[50%] max-w-[20%] sm:max-w-[33%] w-auto  ">
                 <Image
                   src="/images/iphone.png"
                   alt="IPhone devices"
@@ -88,7 +88,7 @@ export default function Hero() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute bottom-0 right-[15%] translate-x-[50%] max-w-[33%] w-auto  hidden sm:block">
+              <div className="absolute bottom-0 right-[15%] translate-x-[50%] max-w-[20%] sm:max-w-[33%] w-auto  ">
                 <Image
                   src="/images/windows.png"
                   alt="Windows device"
@@ -100,40 +100,64 @@ export default function Hero() {
               </div>
 
               <div className="flex items-center justify-center gap-4  flex-wrap">
-                <div className="sm:absolute sm:top-[5%] sm:left-[5%]  ">
+                <div className="absolute top-[5%] left-[5%] max-w-[30%] sm:max-w-[33%] w-auto  ">
                   <Link
                     href="https://play.google.com/store/apps/details?id=com.dimusco.dimusco&hl=en&gl=US"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <PlayStoreIcon />
+                    <Image
+                      src={PlayStoreUrl}
+                      alt="Play Store"
+                      width={135}
+                      height={40}
+                      className="w-full h-auto"
+                    />
                   </Link>
                 </div>
-                <div className="sm:absolute sm:top-[5%] sm:right-[5%]  ">
+                <div className="absolute top-[5%] right-[5%] max-w-[30%] sm:max-w-[33%] w-auto">
                   <Link
                     href="https://apps.apple.com/us/app/dimusco/id6443580984"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <AppStoreIcon />
+                    <Image
+                      src={AppStoreUrl}
+                      alt="App Store"
+                      width={135}
+                      height={40}
+                      className="w-full h-auto"
+                    />
                   </Link>
                 </div>
-                <div className="sm:absolute sm:bottom-[35%] sm:right-0 sm:translate-x-[50%]  ">
+                <div className="absolute bottom-[26%] sm:bottom-[35%] right-0 translate-x-[28%] sm:translate-x-[50%] max-w-[30%] sm:max-w-[33%] w-auto ">
                   <Link
                     href="https://apps.microsoft.com/store/detail/dimusco/9NQKX3JZ2F4T?hl=en-us&gl=US"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MicrosoftStoreIcon />
+                    <Image
+                      src={MicrosoftStoreUrl}
+                      alt="Microsoft Store"
+                      width={113}
+                      height={40}
+                      className="w-full h-auto"
+                    />
                   </Link>
                 </div>
-                <div className="sm:absolute sm:bottom-[5%] sm:left-2 ">
+                <div className="absolute bottom-[5%] left-[8%] sm:left-2 max-w-[30%] sm:max-w-[33%] w-auto ">
                   <Link
                     href="https://apps.apple.com/us/app/dimusco/id6443580984"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MacAppStoreIcon />
+                    <Image
+                      src={MacAppStoreUrl}
+                      alt="Mac App Store"
+                      width={156}
+                      height={40}
+                      className="w-full h-auto"
+                    />
                   </Link>
                 </div>
               </div>
